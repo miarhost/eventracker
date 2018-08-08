@@ -1,0 +1,3 @@
+= eventracker
+
+plugin for redmine, tracking events
