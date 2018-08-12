@@ -17,6 +17,6 @@ private
  
  def collect_data(from: context)
   data = {}
-  data[:issueid] = context[:controller].params[:id]
+data[:issueid] = context[:controller].params[:id]
   byebug
 end
