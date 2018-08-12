@@ -1,3 +1,5 @@
+require_dependency 'eventracker_hook_listener'
+
 Redmine::Plugin.register :eventracker do
   name 'Eventracker plugin'
   author 'miarhost'
