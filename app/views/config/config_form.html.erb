@@ -1,11 +1,6 @@
-<%= form_for @config do |form| %>
-<div class="field">
-<%= form.label :url %>
-<%= form.text_field :url %> 
-</div>
+<h2>Eventracker Configuration</h2>
 
-<div class="actions">
-<%= form.submit 'Submit', controller: 'eventracker', method: 'post' %>
-</div>
-
+<%= form_for @config, url: eventracker_path(@config) do |form| %>
+<%= form.text_field :webhook_url %> 
+<%= form.submit 'Save' %>
 <% end %>

@@ -1,10 +1,12 @@
 class EventrackerController < ApplicationController 
 
-def config 
-@endpoint = STDIN.noecho(&:gets)
-url = URI.parse(endpoint)
+ def edit 
+	@config = Eventracker::Config.instance
+ end
 
-render 'config_form'
-end
+ def update 
+  Eventracker::Config.instance.webhook_url = params[:eventracker_config][:webhook_url]
+  redirect_to :home
+ end
 
 end

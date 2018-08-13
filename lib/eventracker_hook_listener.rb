@@ -6,7 +6,7 @@ class EventrackerHookListener < Redmine::Hook::listener
   action = context[:request][:action]
   Rails.logger.info "Tracking #{controller}/ #{action}"
 
-  url = URI.parse('http://localhost:9292/hello')
+  url = URI.parse(Eventracker::Config.instance.webhook_url)
   res = Net::HTTP.post_form(url, 'data' => collect_data(from: context).to_json)
  
   Rails.logger.info res.code 
