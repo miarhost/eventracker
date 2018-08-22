@@ -3,7 +3,7 @@ module Eventracker
 
   included do
     after_action if: -> { should_be_tracked? request } do
-      call_hock(:eventracker, context)
+      call_hook(:eventracker, context)
     end
   end
   
