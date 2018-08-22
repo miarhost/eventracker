@@ -1,3 +1,8 @@
-= eventracker
+= eventracker 
 
 plugin for redmine, tracking events
+
+=Usage 
+git clone 'https://github.com/redmine/redmine'
+rails generate redmine_plugin:eventracker install
+
