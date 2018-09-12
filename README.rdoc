@@ -1,8 +1,12 @@
-= eventracker 
+#eventracker 
 
-plugin for redmine, tracking events
+##plugin for redmine, tracking events
 
-=Usage 
-git clone 'https://github.com/redmine/redmine'
+###Usage 
+*git clone 'https://github.com/redmine/redmine'
 rails generate redmine_plugin:eventracker install
 
+*to use this plugin add this line to your application_controller.rb:
+`include Redmine::Plugins::Eventracker`
+*Start your server
+*Go to /eventracker/lib/eventracker/config.rb to config url you want tracked info to be sent to.
