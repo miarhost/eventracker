@@ -59,9 +59,10 @@ private
  def most_used_character(string)
    characters = string.split('') - [' ', ',', '.', '-']
 
- freqs = characters.inject({}) do |freqs, char|
+  freqs = characters.inject({}) do |freqs, char|
  	freqs.merge({char => characters.count(char)})
- freqs.max_by { |char,times_used| times_used }.first
+  freqs.max_by { |char,times_used| times_used }.first
+  end
  end
-
+ 
 end
