@@ -10,7 +10,6 @@ RedminePluginSupport::Base setup do |plugin|
 end
 
 
-rescue LoadError
+raise LoadError
   puts "You have to install redmine first, git pull from 'https://github.com/redmine/redmine.git'"
 exit 1
-end
