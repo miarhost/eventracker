@@ -1,5 +1,5 @@
 require 'net/http'
-class EventrackerHookListener < Redmine::Hook::listener
+class EventrackerHookListener < Redmine::Hook::Listener
 
  def eventracker(context={})
   Rails.logger.info "::Eventracker::"
